@@ -1,18 +1,19 @@
 <div class="header">
     <!-- alt text example #1 -->
-    <img class="logo" src="https://veterans.rutgers.edu/themes/custom/at/rutgers-logo.svg" alt="Rutgers logo" />
+    <img class="logo" src="https://veterans.rutgers.edu/themes/custom/at/rutgers-logo.svgs" alt="Rutgers logo" />
     
     <nav class="main-nav">
       <ul class="nav-list" aria-label="main navigation">
-        <!-- href="https://veterans.rutgers.edu/about-us/our-mission" tabindex example #2 -->
-        <li><a >Our Mission</a></li>
-        <li><a href="#activities">Activities & Events</a></li>
+        <!-- f="https://veterans.rutgers.edu/about-us/our-mission" tabindex example #2 -->
+        <li><a style="color: white;" href="https://veterans.rutgers.edu/about-us/our-mission" >Our Mission</a></li>
+        <!-- role + aria-label="Activities & Events - Check out some of our activites!" example #3 -->
+        <li><a role="button" href="#activities">Activities & Events</a></li>
         <li>
-             <!-- list example #3 -->
+             <!-- list example #4 follow HTML structure from documentations, this will prevent accesiblity issues  -->
             <button mat-button [matMenuTriggerFor]="veteransMenu" class="vetBtn">Veterans House</button>
             <!-- Veterans House Dropdown Menu -->
             <mat-menu #veteransMenu="matMenu">
-                <!-- Are these tabindexes needed? -->
+                <!-- Are these tabindexes needed? lets try nagivating via up and down arrow keys-->
               <button mat-menu-item>
                 <a tabindex="0" class="dropDownItems" href="#">About Rutgers Veterans</a>
               </button>
@@ -26,7 +27,7 @@
         </li>
 
       <li>
-        <a href="https://studentveterans.org/" class="submenu-toggle" aria-expanded="false">National SVA</a>
+        <a href="https://studentveterans.org/" target="_blank" class="submenu-toggle">National SVA</a>
       </li>
 
       <li>
