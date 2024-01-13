@@ -1,13 +1,15 @@
 <div class="header">
     <!-- alt text example #1 -->
-    <img class="logo" src="https://veterans.rutgers.edu/themes/custom/at/rutgers-logo.svgs" alt="Rutgers logo" />
+    <img class="logo" src="https://veterans.rutgers.edu/themes/custom/at/rutgers-logo.svg" alt="Rutgers logo" />
     
     <nav class="main-nav">
       <ul class="nav-list" aria-label="main navigation">
-        <!-- f="https://veterans.rutgers.edu/about-us/our-mission" tabindex example #2 -->
-        <li><a style="color: white;" href="https://veterans.rutgers.edu/about-us/our-mission" >Our Mission</a></li>
-        <!-- role + aria-label="Activities & Events - Check out some of our activites!" example #3 -->
-        <li><a role="button" href="#activities">Activities & Events</a></li>
+        <!-- href="https://veterans.rutgers.edu/about-us/our-mission" tabindex example #2 -->
+        <li><a href="https://veterans.rutgers.edu/about-us/our-mission"style="color: white;" >Our Mission</a></li>
+        <!-- role role="button" + aria-label="Activities & Events - Check out some of our events!" observe before and after example #3 -->
+        <li> <!-- <span class="visually-hidden">  -->
+          <a href="#activities">Activities & Events</a>
+          <!-- </span> -->
         <li>
              <!-- list example #4 follow HTML structure from documentations, this will prevent accesiblity issues  -->
             <button mat-button [matMenuTriggerFor]="veteransMenu" class="vetBtn">Veterans House</button>
@@ -15,10 +17,10 @@
             <mat-menu #veteransMenu="matMenu">
                 <!-- Are these tabindexes needed? lets try nagivating via up and down arrow keys-->
               <button mat-menu-item>
-                <a tabindex="0" class="dropDownItems" href="#">About Rutgers Veterans</a>
+                <a tabindex="0" class="dropDownItems" href="https://veterans.rutgers.edu/about-us/">About Rutgers Veterans</a>
               </button>
               <button mat-menu-item>
-                <a tabindex="0" class="dropDownItems" href="#">Resources</a>
+                <a tabindex="0" class="dropDownItems" href="#Rutgers">Resources</a>
               </button>
               <button mat-menu-item>
                 <a class="dropDownItems" >Virtual Vet House</a>
